@@ -1,6 +1,5 @@
 package com.aero.flightApp.controller;
 
-
 import com.aero.flightApp.models.Flight;
 import com.aero.flightApp.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +46,11 @@ public class FlightController {
 		return flightRepository.findByOrigin(origin);
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("bookFlight/{id}")
 	public Flight getFlight(@PathVariable Long id) {
 		return flightRepository.findById(id).orElseThrow(RuntimeException::new);
 	}
-	
+
 	@PostMapping
 	public ResponseEntity createClient (@RequestBody Flight flight) throws URISyntaxException {
 
@@ -65,9 +64,7 @@ public class FlightController {
 		currentFlight.setDate(flight.getDate());
 		currentFlight.setDestination(flight.getDestination());
 		currentFlight.setOrigin(flight.getOrigin());
-
 		currentFlight = flightRepository.save(flight);
-
         return ResponseEntity.ok(currentFlight);
 	}
 	

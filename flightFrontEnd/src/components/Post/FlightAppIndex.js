@@ -29,8 +29,11 @@ function FlightAppIndex() {
           if (destination.origin ==="Sevilla"){
             return (
               <div key={destination.id}>
-                <h5> {destination.origin} </h5>
-              
+                <h3> {destination.origin} </h3>
+                <div>
+                  <input type="radio" value="One Way" name="gender" /> One Way
+                  <input type="radio" value="Two Way" name="gender" /> Two Way
+                </div><br/><br/>
                 <Link className="crud-button edit-button" to={`/selectedDestination/${destination.origin}`} value={destination.origin}><i className="fa-solid l"></i>
                 Check Destination
                 </Link>
@@ -43,13 +46,7 @@ function FlightAppIndex() {
               </div>)    
           }
 
-           
-          }) : "Loading data"}</div>
-
-          <Link to={`/posts/new`}>
-            Add New Post
-          </Link>
-       
+          }) : "Loading data"}</div>       
       </div>
     </div>
   );

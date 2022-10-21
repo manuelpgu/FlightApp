@@ -15,6 +15,7 @@ import CategoryBySelectedThread from './components/Post/CategoryBySelectedThread
 import CreatePostForm from './components/Post/CreatePostForm';
 import FlightAppIndex from  './components/Post/FlightAppIndex';
 import FlightsByDestination from './components/Post/FlightsByDestination';
+import BookFlight from  './components/Post/BookFlight';
 import { Flight } from '@mui/icons-material';
 
 
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
     element: <CreatePostForm />
   },
 
+  {
+    path: "bookFlight/:id",
+    element: <BookFlight/>
+  },
+
   { 
     path: "/selectedDestination/:destination",
     element: <FlightsByDestination/>
@@ -51,6 +57,7 @@ const router = createBrowserRouter([
     path: "/selectedThead/:thead",
     element: <CategoryBySelectedThread/>
   }
+
 ]);
 
 root.render(

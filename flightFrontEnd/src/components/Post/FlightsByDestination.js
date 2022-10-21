@@ -31,7 +31,7 @@ const FlightsByDestination = () => {
       .map((flight) => {
         return <div key={flight.id}>
           <h5>From  {flight.origin}</h5>
-          <h5>To {flight.destination}</h5>
+          <h5>To {flight.destination}</h5>.
           <h6>Date : {flight.date}</h6>
           <Link className="crud-button edit-button" to={`/bookFlight/${flight.id}`} value={flight.id}><i className="fa-solid l"></i>
            Buy
