@@ -10,7 +10,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins="*")
@@ -42,7 +41,6 @@ public class FlightController {
 
 	@GetMapping(path="selectedDestination/{origin}")
 	public List<Flight> getPostByTheadName(@PathVariable("origin") String origin) {
-		System.err.println("Este es el origen ->>>>>>>>>>");
 		return flightRepository.findByOrigin(origin);
 	}
 
@@ -53,7 +51,6 @@ public class FlightController {
 
 	@PostMapping
 	public ResponseEntity createClient (@RequestBody Flight flight) throws URISyntaxException {
-
 		Flight savedClient = flightRepository.save(flight);
 		return ResponseEntity.created(new URI("/clients/" + savedClient.getId())).body(savedClient);
 	}

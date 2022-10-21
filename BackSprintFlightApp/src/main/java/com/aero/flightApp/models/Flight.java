@@ -1,7 +1,5 @@
 package com.aero.flightApp.models;
 
-import lombok.*;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,14 +15,10 @@ public class Flight {
     private Long id;
     //type 1 = origin type 2 = destination
     private String origin;
-
     private String destination;
-
     private int price;
-
     public Flight() {
     }
-
 
     public Flight(String origin, String destination, Date date) {
         this.origin = origin;
