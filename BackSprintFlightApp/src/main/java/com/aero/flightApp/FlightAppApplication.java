@@ -23,9 +23,9 @@ public class FlightAppApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Flight firstFlight = new Flight("Sevilla","Berlin",new Date());
-		Flight secondFlight = new Flight("Sevilla","Mallorca",new Date());
-		Flight thirdFlight = new Flight("Mallorca","Sevilla",new Date());
+		Flight firstFlight = new Flight("Sevilla","Berlin",new Date(), 55);
+		Flight secondFlight = new Flight("Sevilla","Mallorca",new Date(), 100);
+		Flight thirdFlight = new Flight("Mallorca","Sevilla",new Date(), 20);
 
 		flightRepository.saveAll(List.of(firstFlight, secondFlight, thirdFlight));
 

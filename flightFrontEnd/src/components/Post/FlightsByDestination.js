@@ -24,15 +24,15 @@ const FlightsByDestination = () => {
   return (
     <div className="main-container">
       <div className="categoriesSelected">
-      <header><h2>Available flights by Destination</h2><hr></hr></header>
-      <h1>Select a flight</h1>
+      <header><h3>Available flights by Destination</h3><hr></hr></header>
+      <h3>Select a flight</h3>
       <div>{flights ?
       flights
       .map((flight) => {
         return <div key={flight.id}>
-          <h1>From  {flight.origin}</h1>
-          <h1>To {flight.destination}</h1>
-          <h3>Date : {flight.date}</h3>
+          <h5>From  {flight.origin}</h5>
+          <h5>To {flight.destination}</h5>
+          <h6>Date : {flight.date}</h6>
           <Link className="crud-button edit-button" to={`/bookFlight/${flight.id}`} value={flight.id}><i className="fa-solid l"></i>
            Buy
           </Link>
@@ -44,9 +44,6 @@ const FlightsByDestination = () => {
             Go Back To Index
           </Link>
       </div>
-
-     
-
     </div>
 );
 

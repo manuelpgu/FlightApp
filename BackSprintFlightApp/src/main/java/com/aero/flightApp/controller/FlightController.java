@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,10 +27,18 @@ public class FlightController {
 
 	@GetMapping("")
 	public List<Flight> getDestionations(){
-		List<Flight> allFlights = flightRepository.findAll().stream()
-				.distinct()
-				.collect(Collectors.toList());
-		return allFlights;
+
+		List<Flight> flightsWithDifferentDestinations = new ArrayList<>();
+		List <String> origins = new ArrayList<>();
+		List<Flight> allFlights = flightRepository.findAll();
+
+		for (Flight flight : allFlights) {
+			if(!origins.contains(flight.getOrigin())){
+				origins.add(flight.getOrigin());
+				flightsWithDifferentDestinations.add(flight);
+			}
+		}
+		return flightsWithDifferentDestinations;
 	}
 
 	@GetMapping(path="selectedDestination/{origin}")

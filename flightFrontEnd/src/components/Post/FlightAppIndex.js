@@ -26,16 +26,25 @@ function FlightAppIndex() {
         destinations
         .map((destination) => {
 
-            return <div key={destination.id}>
-            <h5> {destination.origin} </h5>
+          if (destination.origin ==="Sevilla"){
+            return (
+              <div key={destination.id}>
+                <h5> {destination.origin} </h5>
+              
+                <Link className="crud-button edit-button" to={`/selectedDestination/${destination.origin}`} value={destination.origin}><i className="fa-solid l"></i>
+                Check Destination
+                </Link>
+              </div>) 
+          } else {
+            return (
+              <div key={destination.id}>
+                <h5> {destination.origin} </h5>  
+                <h6>Destination not Available right now</h6>
+              </div>)    
+          }
+
            
-            <Link className="crud-button edit-button" to={`/selectedDestination/${destination.origin}`} value={destination.origin}><i className="fa-solid l"></i>
-            Check Destination
-            </Link>
-            
-          </div>
-          
-        }) : "Loading data"}</div>
+          }) : "Loading data"}</div>
 
           <Link to={`/posts/new`}>
             Add New Post

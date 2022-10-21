@@ -20,6 +20,8 @@ public class Flight {
 
     private String destination;
 
+    private int price;
+
     public Flight() {
     }
 
@@ -30,8 +32,22 @@ public class Flight {
         this.date = date;
     }
 
+    public Flight(String origin, String destination, Date date, int price) {
+        this.origin = origin;
+        this.destination = destination;
+        this.date = date;
+        this.price = price;
+    }
+
     private Date date;
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
     public Long getId() {
         return id;

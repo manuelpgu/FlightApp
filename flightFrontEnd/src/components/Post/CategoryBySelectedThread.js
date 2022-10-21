@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
-
 const CategoryBySelectedThread = () => {
   const [posts, setPosts] = useState(null)
 
@@ -41,9 +40,6 @@ const CategoryBySelectedThread = () => {
             Go Back To threads
           </Link>
       </div>
-
-     
-
     </div>
 );
 
