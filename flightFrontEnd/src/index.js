@@ -14,6 +14,7 @@ import ForumApp from './components/Post/ForumApp';
 import CategoryBySelectedThread from './components/Post/CategoryBySelectedThread';
 import CreatePostForm from './components/Post/CreatePostForm';
 import FlightAppIndex from  './components/Post/FlightAppIndex';
+import FlightsByDestination from './components/Post/FlightsByDestination';
 import { Flight } from '@mui/icons-material';
 
 
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
 
   { 
     path: "/selectedDestination/:destination",
-    element: <CategoryBySelectedThread/>
+    element: <FlightsByDestination/>
   },
 
   {

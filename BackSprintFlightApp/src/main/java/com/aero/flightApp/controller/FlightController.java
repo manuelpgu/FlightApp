@@ -32,6 +32,12 @@ public class FlightController {
 		return allFlights;
 	}
 
+	@GetMapping(path="selectedDestination/{origin}")
+	public List<Flight> getPostByTheadName(@PathVariable("origin") String origin) {
+		System.err.println("Este es el origen ->>>>>>>>>>");
+		return flightRepository.findByOrigin(origin);
+	}
+
 	@GetMapping("/{id}")
 	public Flight getFlight(@PathVariable Long id) {
 		return flightRepository.findById(id).orElseThrow(RuntimeException::new);
