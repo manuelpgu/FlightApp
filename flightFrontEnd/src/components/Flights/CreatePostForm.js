@@ -31,15 +31,10 @@ const CreatePostForm = () => {
               <h2>Add Posts</h2>
               <form onSubmit={createPost} className="update-form">
               <TextField id="standard-basic" name="userName" label="userName" variant="standard"/>
-
               <TextField id="standard-basic" name="thread" label="thread" variant="standard"/>
-
               <TextField id="standard-basic" name="category" label="category" variant="standard"/>
-
               <TextField id="standard-basic" name="postBody" label="postBody" variant="standard"/>
-
               <TextField id="standard-basic" name="imageLink" label="imageLink" variant="standard"/>
-              
               <Button type="submit" variant="contained">Add Posts</Button>
               </form>
             </div>

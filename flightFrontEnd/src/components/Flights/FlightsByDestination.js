@@ -46,8 +46,6 @@ const FlightsByDestination = () => {
       </div>
     </div>
 );
-
-
 };
 
 export default FlightsByDestination;

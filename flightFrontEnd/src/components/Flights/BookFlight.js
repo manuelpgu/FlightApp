@@ -15,17 +15,15 @@ const BookFlight = () => {
 
   const buyFlight = (event) => {
   
-
-    alert("Se ha pulsado el boton");
     const body = {
       "userName": event.target[0].value,
     }
     axios.post(apiDomain+'/flights', body).then((res) => {
       if (res.status === 200) {
-        navigate("/");
+        navigate("/selectedDestination/:Sevilla");
       }
       else{
-        navigate("/");
+        navigate("/selectedDestination/:Sevilla");
       }
     });
   }
@@ -49,7 +47,6 @@ const BookFlight = () => {
 
   document.querySelectorAll("input").forEach(item => {
     item.addEventListener("change", () => {
-       console.log(item.id);
        if(item.id=="smaller"){
         setFinalPrice(basicPrice * 0)
        }
