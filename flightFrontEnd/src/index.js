@@ -11,22 +11,14 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import ForumApp from './components/Flights/ForumApp';
-import CategoryBySelectedThread from './components/Flights/CategoryBySelectedThread';
 import CreatePostForm from './components/Flights/CreatePostForm';
 import FlightAppIndex from  './components/Flights/FlightAppIndex';
 import FlightsByDestination from './components/Flights/FlightsByDestination';
 import BookFlight from  './components/Flights/BookFlight';
-import { Flight } from '@mui/icons-material';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
- /* {
-    path: "/",
-    element: <CreatePostForm/>,
-  },*/
-
   {
     path: "/",
     element: <FlightAppIndex/>,
@@ -51,11 +43,6 @@ const router = createBrowserRouter([
   { 
     path: "/selectedDestination/:destination",
     element: <FlightsByDestination/>
-  },
-
-  {
-    path: "/selectedThead/:thead",
-    element: <CategoryBySelectedThread/>
   }
 
 ]);
