@@ -10,12 +10,12 @@ import {
   RouterProvider
 } from "react-router-dom";
 import "./index.css";
-import ForumApp from './components/Post/ForumApp';
-import CategoryBySelectedThread from './components/Post/CategoryBySelectedThread';
-import CreatePostForm from './components/Post/CreatePostForm';
-import FlightAppIndex from  './components/Post/FlightAppIndex';
-import FlightsByDestination from './components/Post/FlightsByDestination';
-import BookFlight from  './components/Post/BookFlight';
+import ForumApp from './components/Flights/ForumApp';
+import CategoryBySelectedThread from './components/Flights/CategoryBySelectedThread';
+import CreatePostForm from './components/Flights/CreatePostForm';
+import FlightAppIndex from  './components/Flights/FlightAppIndex';
+import FlightsByDestination from './components/Flights/FlightsByDestination';
+import BookFlight from  './components/Flights/BookFlight';
 import { Flight } from '@mui/icons-material';
 
 
