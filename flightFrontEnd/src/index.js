@@ -41,6 +41,11 @@ const router = createBrowserRouter([
     element: <CreatePostForm />
   },
 
+  { 
+    path: "/selectedDestination/:destination",
+    element: <CategoryBySelectedThread/>
+  },
+
   {
     path: "/selectedThead/:thead",
     element: <CategoryBySelectedThread/>
