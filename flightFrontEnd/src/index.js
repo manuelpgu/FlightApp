@@ -13,14 +13,22 @@ import "./index.css";
 import ForumApp from './components/Post/ForumApp';
 import CategoryBySelectedThread from './components/Post/CategoryBySelectedThread';
 import CreatePostForm from './components/Post/CreatePostForm';
+import FlightAppIndex from  './components/Post/FlightAppIndex';
+import { Flight } from '@mui/icons-material';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
-  {
+ /* {
     path: "/",
     element: <CreatePostForm/>,
+  },*/
+
+  {
+    path: "/",
+    element: <FlightAppIndex/>,
+
   },
 
   {
