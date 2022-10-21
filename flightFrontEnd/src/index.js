@@ -26,16 +26,6 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/forumApp",
-    element: <ForumApp/>,
-  },
-
-  {
-    path: "/posts/new",
-    element: <CreatePostForm />
-  },
-
-  {
     path: "bookFlight/:id",
     element: <BookFlight/>
   },

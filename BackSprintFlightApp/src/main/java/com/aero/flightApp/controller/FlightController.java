@@ -50,10 +50,20 @@ public class FlightController {
 	}
 
 	@PostMapping
+	public ResponseEntity createClient (@RequestBody String name) throws URISyntaxException {
+
+		if(name.contains("o")){
+			return ResponseEntity.badRequest().build();
+		}
+
+		return ResponseEntity.ok().build();
+	}
+
+	/*@PostMapping
 	public ResponseEntity createClient (@RequestBody Flight flight) throws URISyntaxException {
 		Flight savedClient = flightRepository.save(flight);
 		return ResponseEntity.created(new URI("/clients/" + savedClient.getId())).body(savedClient);
-	}
+	}*/
 	
 	@PutMapping("/{id}")
 	public ResponseEntity updateClient(@PathVariable Long id, @RequestBody Flight flight) {
